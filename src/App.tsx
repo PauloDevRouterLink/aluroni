@@ -1,10 +1,12 @@
+import { Menu } from './pages/Menu'
+
 export function App() {
 	return (
 		<main>
 			<section>
 				<h1>Hello World</h1>
 				<span>Hello</span>
-				<span>Aluroni</span>
+				<Menu />
 			</section>
 		</main>
 	)
