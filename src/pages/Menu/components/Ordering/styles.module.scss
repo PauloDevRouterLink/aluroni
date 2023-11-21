@@ -1,0 +1,66 @@
+@use '../../../../scss/main.scss';
+
+.ordering {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: main.$trout_200;
+  color: main.$trout_700;
+
+  border: none;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+
+  font-size: 1.45rem;
+  font-weight: main.$fw_bold;
+  font-family: main.$font_poppins;
+
+  height: 4rem;
+  min-width: 24rem;
+  padding: 0 4rem;
+
+  position: relative;
+
+  cursor: pointer;
+
+  &--active {
+    background-color: main.$thunderbird_500;
+    color: main.$trout_100;
+  }
+
+  &__options {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    width: 100%;
+    flex-direction: column;
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: main.$trout_100;
+    color: main.$trout_950;
+
+    border-top: 0.2rem solid main.$trout_200;
+    width: inherit;
+    height: 4rem;
+
+    &:hover,
+    &--active {
+      background-color: main.$thunderbird_200;
+      color: main.$thunderbird_700;
+      cursor: pointer;
+    }
+  }
+}

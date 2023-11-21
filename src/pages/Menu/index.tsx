@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Search } from './components/Search'
 import { Filter } from './components/Filter'
+import { Ordering } from './components/Ordering'
 
 import MENU_OPTIONS from './[menu_options]'
 import Logotipo from '../../assets/logo.svg'
@@ -9,6 +10,7 @@ import styles from './styles.module.scss'
 export const Menu = () => {
   const [searching, setSearching] = useState<string>('')
   const [filter, setFilter] = useState<number | null>(null)
+  const [order, setOrder] = useState<string>('')
 
   return (
     <main>
@@ -28,6 +30,8 @@ export const Menu = () => {
             filtered={filter}
             setFiltered={setFilter}
           />
+
+          <Ordering ordering={order} setOrdering={setOrder} />
         </div>
       </section>
     </main>

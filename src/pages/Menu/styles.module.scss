@@ -14,7 +14,7 @@
 }
 
 .header {
-  background: url('/public/menu/header.png');
+  background: url('/menu/header.png');
   background-size: cover;
   background-repeat: no-repeat;
   height: 300px;
@@ -40,14 +40,6 @@
     min-width: 40rem;
     width: 40%;
   }
-
-  &__filter {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    width: 100%;
-  }
 }
 
 .menu {
@@ -67,5 +59,13 @@
     font-size: 4rem;
     font-family: main.$font_italiana;
     margin-bottom: 3rem;
+  }
+
+  &__filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    width: 100%;
   }
 }

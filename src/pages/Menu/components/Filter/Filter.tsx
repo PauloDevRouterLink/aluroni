@@ -19,13 +19,13 @@ const Filter: FC<FilterProps> = ({ listFilter, filtered, setFiltered }) => {
   }
 
   return (
-    <div className={styles.filter}>
+    <div className={styles.filtered}>
       {listFilter?.map(option => (
         <button
           key={option.id}
           className={classNames({
-            [styles.filter__item]: true,
-            [styles['filter__item--active']]: filtered === option.id,
+            [styles.filtered__item]: true,
+            [styles['filtered__item--active']]: filtered === option.id,
           })}
           onClick={() => selectFilter(option)}
         >

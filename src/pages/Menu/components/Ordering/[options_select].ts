@@ -1,0 +1,6 @@
+export default [
+  { name: '', value: '' },
+  { name: 'Porção', value: 'porcao' },
+  { name: 'Qtd. pessoas', value: 'qtd_pessoas' },
+  { name: 'Preço', value: 'preco' },
+]
