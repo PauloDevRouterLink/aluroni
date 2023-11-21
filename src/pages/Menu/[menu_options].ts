@@ -1,0 +1,6 @@
+export default [
+  { id: 1, label: "Massas" },
+  { id: 2, label: "Carnes" },
+  { id: 3, label: "Combos" },
+  { id: 4, label: "Veganos" }
+]

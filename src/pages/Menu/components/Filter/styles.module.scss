@@ -1,0 +1,44 @@
+@use '../../../../scss/main';
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+
+  margin: 2rem 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: main.$trout_700;
+    background: main.$trout_200;
+    border: none;
+    border-radius: 0.785rem;
+
+    font-size: 1.45rem;
+    font-family: main.$font_poppins;
+    font-weight: main.$fw_semibold;
+
+    letter-spacing: 0.045em;
+
+    height: 4rem;
+    width: 15rem;
+
+    transition: all 0.2s ease-in-out;
+
+    &--active {
+      background-color: main.$thunderbird_600;
+      color: main.$trout_50;
+    }
+
+    &:hover {
+      background-color: main.$thunderbird_200;
+      color: main.$thunderbird_700;
+
+      width: 17rem;
+      cursor: pointer;
+    }
+  }
+}

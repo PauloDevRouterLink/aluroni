@@ -1,31 +1,33 @@
 @use './main.scss';
 
 * {
-	box-sizing: border-box;
-	text-decoration: none;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
 
-	::-webkit-scrollbar {
-		width: 1rem;
-	}
+  ::-webkit-scrollbar {
+    width: 1rem;
+  }
 
-	::-webkit-scrollbar-track {
-		background: main.$zinc_800;
-	}
+  ::-webkit-scrollbar-track {
+    background: main.$trout_950;
+  }
 
-	::-webkit-scrollbar-thumb {
-		background: main.$violet_500;
-		border-radius: 1rem;
-	}
+  ::-webkit-scrollbar-thumb {
+    background: main.$cinnabar_400;
+    border-radius: 1rem;
+  }
 }
 
 body {
-	font-family: main.$font_poppins;
+  font-family: main.$font_poppins;
+  background-color: main.$caper_50;
 }
 
 h1 {
-	font-family: main.$font_lucida;
-	font-weight: main.$fw_hairline;
-	font-size: 4rem;
+  font-family: main.$font_italiana;
+  font-weight: main.$fw_hairline;
+  font-size: 4rem;
 }

@@ -3,8 +3,9 @@
 */
 
 $font_poppins: 'Poppins', sans-serif;
+$font_italiana: 'Italiana', sans-serif;
 $font_lucida: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-	'Lucida Sans', Arial, sans-serif;
+  'Lucida Sans', Arial, sans-serif;
 
 $fw_hairline: 100;
 $fw_thin: 200;
@@ -15,3 +16,12 @@ $fw_semibold: 600;
 $fw_bold: 700;
 $fw_extrabold: 800;
 $fw_black: 900;
+
+$padding_horizontal_mobile: 10rem;
+$padding_horizontal_sm: 15rem;
+$padding_horizontal_md: 20rem;
+$padding_horizontal: 25rem;
+
+:root {
+  font-size: 62.5%; /*TODO: 1rem = 10px */
+}
