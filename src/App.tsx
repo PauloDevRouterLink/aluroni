@@ -1,9 +1,9 @@
-import { Menu } from './pages/Menu'
+import { Outlet } from 'react-router-dom'
 
 export function App() {
   return (
     <>
-      <Menu />
+      <Outlet />
     </>
   )
 }
