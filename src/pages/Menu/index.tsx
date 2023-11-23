@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Search } from './components/Search'
 import { Filter } from './components/Filter'
 import { Ordering } from './components/Ordering'
+import { ListMenuItems } from './components/ListMenuItems'
 
 import MENU_OPTIONS from './[menu_options]'
 import Logotipo from '../../assets/logo.svg'
@@ -33,6 +34,8 @@ export const Menu = () => {
 
           <Ordering ordering={order} setOrdering={setOrder} />
         </div>
+
+        <ListMenuItems search={searching} ordering={order} filtered={filter} />
       </section>
     </main>
   )
