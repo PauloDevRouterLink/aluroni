@@ -3,6 +3,8 @@ import { RouteObject, createBrowserRouter } from 'react-router-dom'
 import { App } from '../App'
 import { Menu } from '../pages/Menu'
 import { Home } from '../pages/Home'
+import { About } from '../pages/About'
+import { NotFound } from '../pages/404'
 
 type RouterProps = {
   path: string
@@ -15,7 +17,7 @@ const router: Array<RouterProps> = [
   {
     path: '/',
     element: <App />,
-    errorElement: <h2>Not Found</h2>,
+    errorElement: <NotFound />,
     children: [
       {
         path: '/',
@@ -24,6 +26,10 @@ const router: Array<RouterProps> = [
       {
         path: 'menu',
         element: <Menu />,
+      },
+      {
+        path: 'about',
+        element: <About />,
       },
     ],
   },

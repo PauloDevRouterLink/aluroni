@@ -1,0 +1,20 @@
+@use '../../scss/main';
+
+.footer {
+  background: main.$cinnabar_600;
+
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 1rem main.$padding_horizontal;
+
+  @media (max-width: main.$desktop_xs) {
+    padding: 1rem main.$padding_horizontal_mobile;
+  }
+  @media (max-width: main.$desktop_xs) and (max-width: main.$desktop_sm) {
+    padding: 1rem main.$padding_horizontal_sm;
+  }
+  @media (max-width: main.$desktop_sm) and (max-width: main.$desktop_md) {
+    padding: 1rem main.$padding_horizontal_md;
+  }
+}

@@ -1,0 +1,17 @@
+@use '../../scss/main';
+
+.not_found {
+  height: 62.7rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back_to__button {
+  @include main.container;
+
+  button {
+    @include main.backToButton;
+  }
+}

@@ -40,8 +40,8 @@
           transition: all 0.2s ease;
 
           &:hover {
-            color: main.$cinnabar_600;
-            background-color: main.$cinnabar_200;
+            color: main.$trout_600;
+            background-color: main.$cinnabar_100;
             border-radius: 0.3rem;
 
             padding: 0.5rem;
@@ -49,9 +49,12 @@
         }
 
         &--active {
-          border-bottom: 0.2rem solid main.$cinnabar_500;
+          border-bottom: 0.2rem solid main.$cinnabar_600;
           padding-bottom: 0.25rem;
-          color: main.$trout_200;
+          a {
+            color: main.$cinnabar_600;
+            padding: 0.7rem;
+          }
         }
       }
     }

@@ -23,6 +23,16 @@ export const Home = () => {
           </div>
         ))}
       </div>
+
+      <h3 className={styles.home__title}>Nossa casa</h3>
+
+      <div className={styles.our_home}>
+        <img src="/assets/nossa_casa.png" alt="Casa do Aluroni" />
+        <div className={styles.our_home__address}>
+          Rua Vergueiro, 3185 <br />
+          <br /> Vila Mariana, SP
+        </div>
+      </div>
     </section>
   )
 }
