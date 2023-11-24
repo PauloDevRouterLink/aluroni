@@ -1,12 +1,12 @@
-@use '../../../../scss/main.scss';
+@use '../../../../scss/main';
 
 .ordering {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background: main.$trout_200;
-  color: main.$trout_700;
+  background: main.$caper_200;
+  color: main.$caper_700;
 
   border: none;
   border-top-left-radius: 0.4rem;
@@ -25,8 +25,8 @@
   cursor: pointer;
 
   &--active {
-    background-color: main.$thunderbird_500;
-    color: main.$trout_100;
+    background-color: main.$caper_300;
+    color: main.$caper_700;
   }
 
   &__options {
@@ -49,17 +49,17 @@
     align-items: center;
     justify-content: center;
 
-    background-color: main.$trout_100;
-    color: main.$trout_950;
+    background-color: main.$caper_100;
+    color: main.$caper_700;
 
-    border-top: 0.2rem solid main.$trout_200;
+    border-top: 0.2rem solid main.$caper_200;
     width: inherit;
     height: 4rem;
 
     &:hover,
     &--active {
-      background-color: main.$thunderbird_200;
-      color: main.$thunderbird_700;
+      background-color: main.$caper_200;
+      color: main.$caper_600;
       cursor: pointer;
     }
   }

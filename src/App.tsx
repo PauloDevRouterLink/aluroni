@@ -1,12 +1,29 @@
+import { useMemo } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { NavBar } from './components/NavBar'
 
 import Logotipo from './assets/logo.svg'
 import styles from './scss/app/styles.module.scss'
 import classNames from 'classnames'
+import { Footer } from './components/Footer'
 
 export const App = () => {
   const location = useLocation()
+  const isActiveBanner = location.pathname
+
+  const isActive = useMemo(() => {
+    switch (isActiveBanner) {
+      case '/':
+        return '--home'
+      case '/menu':
+        return '--menu'
+      case '/about':
+        return '--about'
+
+      default:
+        return ''
+    }
+  }, [isActiveBanner])
 
   return (
     <main>
@@ -15,8 +32,7 @@ export const App = () => {
       <header
         className={classNames({
           [styles.header]: true,
-          [styles[`header${location.pathname === '/' ? '--home' : '--menu'}`]]:
-            true,
+          [styles[`header${isActive}`]]: true,
         })}
       >
         <div className={styles.header__title}>
@@ -27,6 +43,8 @@ export const App = () => {
       <div className={styles.app__container}>
         <Outlet />
       </div>
+
+      <Footer logoUrl={Logotipo} />
     </main>
   )
 }

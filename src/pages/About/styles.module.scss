@@ -1,0 +1,43 @@
+@use '../../scss/main';
+
+.about__title {
+  @include main.title;
+}
+
+.about_us {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 5rem;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-size: 1.5rem;
+    font-weight: main.$fw_bold;
+
+    text-align: justify;
+
+    p {
+      font-family: main.$font_poppins;
+      font-weight: main.$fw_normal;
+    }
+  }
+}
+
+.about_images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+
+  &__image {
+    width: 60rem;
+
+    img {
+      border-radius: 0.5rem;
+      width: 100%;
+    }
+  }
+}

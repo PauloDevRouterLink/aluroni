@@ -23,3 +23,32 @@
     padding: 5rem variables.$padding_horizontal_md;
   }
 }
+
+@mixin backToButton {
+  background: transparent;
+  border: 0.2rem solid transparent;
+  border-radius: 0.7rem;
+
+  font-size: 1.75rem;
+  font-weight: variables.$fw_semibold;
+
+  color: colors.$cinnabar_500;
+
+  width: 10rem;
+  padding: 0.5rem;
+
+  transition: all 0.2s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+
+  &:hover {
+    border-color: colors.$caper_500;
+    color: colors.$caper_500;
+
+    width: 11.5rem;
+    gap: 1rem;
+  }
+}
