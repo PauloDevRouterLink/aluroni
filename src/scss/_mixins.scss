@@ -1,0 +1,25 @@
+@use './colors';
+@use './variables';
+@use './breakpoints';
+
+// TODO: ==> MIXINS
+
+@mixin title {
+  color: colors.$trout_800;
+  font-size: 4rem;
+  font-family: variables.$font_italiana;
+  margin-bottom: 3rem;
+}
+
+@mixin container {
+  padding: 5rem variables.$padding_horizontal;
+  @media (max-width: breakpoints.$desktop_xs) {
+    padding: 5rem variables.$padding_horizontal_mobile;
+  }
+  @media (max-width: breakpoints.$desktop_xs) and (max-width: breakpoints.$desktop_sm) {
+    padding: 5rem variables.$padding_horizontal_sm;
+  }
+  @media (max-width: breakpoints.$desktop_sm) and (max-width: breakpoints.$desktop_md) {
+    padding: 5rem variables.$padding_horizontal_md;
+  }
+}

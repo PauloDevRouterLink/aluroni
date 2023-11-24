@@ -1,12 +1,12 @@
 import { FC } from 'react'
 import classNames from 'classnames'
 
-import ITEMS from './[items_menu]/[items_menu]'
+import MENU from '../../../../data/[items_menu]/[items_menu]'
 
 import styles from './styles.module.scss'
 
 type ListItemType = {
-  item: (typeof ITEMS)[0]
+  item: (typeof MENU)[0]
 }
 
 export const ListItem: FC<ListItemType> = ({ item }) => {

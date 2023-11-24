@@ -1,0 +1,59 @@
+@use '../../scss/main';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    padding: 2rem main.$padding_horizontal;
+
+    @media (max-width: main.$desktop_xs) {
+      padding: 2rem main.$padding_horizontal_mobile;
+    }
+    @media (max-width: main.$desktop_xs) and (max-width: main.$desktop_sm) {
+      padding: 2rem main.$padding_horizontal_sm;
+    }
+    @media (max-width: main.$desktop_sm) and (max-width: main.$desktop_md) {
+      padding: 2rem main.$padding_horizontal_md;
+    }
+  }
+
+  &__links {
+    padding-right: 30rem;
+
+    ul {
+      list-style: none;
+
+      display: flex;
+      gap: 3.7rem;
+
+      .navbar__link {
+        font-size: 1.85rem;
+        font-weight: main.$fw_semibold;
+        font-family: main.$font_italiana;
+
+        a {
+          color: main.$trout_800;
+          border: 0.2rem solid transparent;
+
+          transition: all 0.2s ease;
+
+          &:hover {
+            color: main.$cinnabar_600;
+            background-color: main.$cinnabar_200;
+            border-radius: 0.3rem;
+
+            padding: 0.5rem;
+          }
+        }
+
+        &--active {
+          border-bottom: 0.2rem solid main.$cinnabar_500;
+          padding-bottom: 0.25rem;
+          color: main.$trout_200;
+        }
+      }
+    }
+  }
+}

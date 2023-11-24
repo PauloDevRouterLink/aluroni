@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from 'react'
 import { ListItem } from './ListItem'
-import ITEMS from './[items_menu]/[items_menu]'
+import MENU from '../../../../data/[items_menu]/[items_menu]'
 import styles from './styles.module.scss'
 
 type ListMenuItemsProps = {
@@ -10,11 +10,11 @@ type ListMenuItemsProps = {
 }
 
 export const ListMenuItems: FC<ListMenuItemsProps> = props => {
-  const [list, setList] = useState<typeof ITEMS>(ITEMS)
+  const [list, setList] = useState<typeof MENU>(MENU)
   const { ordering, filtered, search } = props
 
   useEffect(() => {
-    const newList = ITEMS.filter(
+    const newList = MENU.filter(
       item => getSearchItem(item.title) && getFiltered(item.category.id)
     )
 
@@ -32,13 +32,13 @@ export const ListMenuItems: FC<ListMenuItemsProps> = props => {
   }
 
   const handleOrderPropertyIncrement = (
-    newList: typeof ITEMS,
+    newList: typeof MENU,
     property: 'size' | 'serving' | 'price'
   ) => {
     return newList.sort((a, b) => (a[property] > b[property] ? 1 : -1))
   }
 
-  const handleOrder = (newList: typeof ITEMS) => {
+  const handleOrder = (newList: typeof MENU) => {
     switch (ordering) {
       case 'porcao':
         return handleOrderPropertyIncrement(newList, 'size')

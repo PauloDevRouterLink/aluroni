@@ -1,67 +1,8 @@
 @use '../../scss/main';
 
-.navbar {
-  display: flex;
-  justify-content: center;
-  padding: 2rem main.$padding_horizontal;
-  @media (max-width: main.$desktop_xs) {
-    padding: 2rem main.$padding_horizontal_mobile;
-  }
-  @media (max-width: main.$desktop_xs) and (max-width: main.$desktop_sm) {
-    padding: 2rem main.$padding_horizontal_sm;
-  }
-  @media (max-width: main.$desktop_sm) and (max-width: main.$desktop_md) {
-    padding: 2rem main.$padding_horizontal_md;
-  }
-}
-
-.header {
-  background: url('/menu/header.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 350px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 0 main.$padding_horizontal;
-  @media (max-width: main.$desktop_xs) {
-    padding: 0 main.$padding_horizontal_mobile;
-  }
-  @media (max-width: main.$desktop_xs) and (max-width: main.$desktop_sm) {
-    padding: 0 main.$padding_horizontal_sm;
-  }
-  @media (max-width: main.$desktop_sm) and (max-width: main.$desktop_md) {
-    padding: 0 main.$padding_horizontal_md;
-  }
-
-  &__text {
-    color: main.$caper_100;
-    font-size: 5rem;
-    font-family: main.$font_italiana;
-    min-width: 40rem;
-    width: 50%;
-  }
-}
-
 .menu {
-  padding: 5rem main.$padding_horizontal;
-  @media (max-width: main.$desktop_xs) {
-    padding: 5rem main.$padding_horizontal_mobile;
-  }
-  @media (max-width: main.$desktop_xs) and (max-width: main.$desktop_sm) {
-    padding: 5rem main.$padding_horizontal_sm;
-  }
-  @media (max-width: main.$desktop_sm) and (max-width: main.$desktop_md) {
-    padding: 5rem main.$padding_horizontal_md;
-  }
-
   &__title {
-    color: main.$trout_900;
-    font-size: 4rem;
-    font-family: main.$font_italiana;
-    margin-bottom: 3rem;
+    @include main.title;
   }
 
   &__filter {

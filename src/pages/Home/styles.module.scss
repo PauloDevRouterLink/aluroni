@@ -1,0 +1,85 @@
+@use '../../scss/main';
+
+// TODO: Styles from page Home
+
+.home__title {
+  @include main.title;
+}
+
+.home_recommended {
+  border-radius: 0.2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  gap: 3rem;
+}
+
+.home_recommend {
+  &__image {
+    width: 30rem;
+    margin-bottom: 1rem;
+
+    img {
+      border-radius: 0.8rem;
+      width: 100%;
+    }
+  }
+
+  &__button {
+    background-color: main.$thunderbird_500;
+    color: main.$trout_50;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+
+    font-size: 1.2rem;
+    font-weight: main.$fw_bold;
+    padding: 1rem 0;
+
+    transition: 0.2s ease;
+    width: 100%;
+
+    &:hover {
+      background-color: main.$thunderbird_800;
+    }
+  }
+}
+
+.our_home {
+  margin-bottom: 10rem;
+  position: relative;
+  width: 100%;
+
+  img {
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+
+  &__address {
+    background-color: main.$trout_950;
+    color: main.$trout_50;
+
+    border-radius: 0.5rem;
+    bottom: -4.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    font-weight: main.$fw_bold;
+
+    height: 10rem;
+    width: 20rem;
+
+    margin: 0 auto;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+}

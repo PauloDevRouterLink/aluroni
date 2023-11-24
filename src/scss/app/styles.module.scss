@@ -1,0 +1,50 @@
+@use '../main.scss';
+
+.app__container {
+  @include main.container;
+}
+
+.header {
+  height: 35rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 main.$padding_horizontal;
+  @media (max-width: main.$desktop_xs) {
+    padding: 0 main.$padding_horizontal_mobile;
+  }
+  @media (max-width: main.$desktop_xs) and (max-width: main.$desktop_sm) {
+    padding: 0 main.$padding_horizontal_sm;
+  }
+  @media (max-width: main.$desktop_sm) and (max-width: main.$desktop_md) {
+    padding: 0 main.$padding_horizontal_md;
+  }
+
+  &__title {
+    color: main.$caper_200;
+
+    font-weight: main.$fw_semibold;
+    font-family: main.$font_italiana;
+    font-size: 5rem;
+
+    text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.8);
+
+    min-width: 40rem;
+    width: 60%;
+  }
+
+  &--home {
+    background: url('/menu/banner_1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--menu {
+    background: url('/menu/header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
