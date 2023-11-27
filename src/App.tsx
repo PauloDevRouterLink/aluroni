@@ -1,14 +1,15 @@
 import { useMemo } from 'react'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet, useLocation, useParams } from 'react-router-dom'
+import classNames from 'classnames'
 import { NavBar } from './components/NavBar'
+import { Footer } from './components/Footer'
 
 import Logotipo from './assets/logo.svg'
 import styles from './scss/app/styles.module.scss'
-import classNames from 'classnames'
-import { Footer } from './components/Footer'
 
 export const App = () => {
   const location = useLocation()
+  const params = useParams()
   const isActiveBanner = location.pathname
 
   const isActive = useMemo(() => {
@@ -17,6 +18,8 @@ export const App = () => {
         return '--home'
       case '/menu':
         return '--menu'
+      case `/detail/${params.id}`:
+        return '--detail'
       case '/about':
         return '--about'
 

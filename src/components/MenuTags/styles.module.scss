@@ -1,0 +1,41 @@
+@use '../../scss/main';
+
+.menu_tags {
+  @include main.tagContainer;
+
+  > div {
+    margin: 1rem;
+  }
+
+  &__type {
+    @include main.type;
+
+    &__massas {
+      @include main.menuTagsType(main.$massas, main.$trout_50);
+    }
+
+    &__carnes {
+      @include main.menuTagsType(main.$carnes, main.$trout_50);
+    }
+
+    &__combos {
+      @include main.menuTagsType(main.$combos, main.$trout_50);
+    }
+
+    &__veganos {
+      @include main.menuTagsType(main.$veganos, main.$trout_50);
+    }
+  }
+
+  &__portion,
+  &__quantity_people,
+  &__value {
+    @include main.tags(1.65rem);
+  }
+
+  &__value {
+    color: main.$thunderbird_600;
+    font-size: 1.7rem;
+    font-family: main.$font_italiana;
+  }
+}

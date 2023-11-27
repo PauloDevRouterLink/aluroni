@@ -5,6 +5,7 @@ import { Menu } from '../pages/Menu'
 import { Home } from '../pages/Home'
 import { About } from '../pages/About'
 import { NotFound } from '../pages/404'
+import { DetailPlates } from '../pages/[DetailsPlates]'
 
 type RouterProps = {
   path: string
@@ -26,6 +27,10 @@ const router: Array<RouterProps> = [
       {
         path: 'menu',
         element: <Menu />,
+      },
+      {
+        path: 'detail/:id',
+        element: <DetailPlates />,
       },
       {
         path: 'about',

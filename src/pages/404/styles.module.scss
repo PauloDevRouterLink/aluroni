@@ -10,8 +10,4 @@
 
 .back_to__button {
   @include main.container;
-
-  button {
-    @include main.backToButton;
-  }
 }

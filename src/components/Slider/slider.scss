@@ -1,0 +1,25 @@
+@use '../../scss/main';
+
+.swiper {
+  padding: 3.2rem;
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: main.$thunderbird_400;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: main.$thunderbird_600;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    transform: scale(1.1);
+  }
+}

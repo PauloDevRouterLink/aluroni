@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import NAV_LINK from './[nav-links]'
 
 import styles from './styles.module.scss'
@@ -9,6 +9,7 @@ type NavBarProps = { imageUrl: string }
 
 export const NavBar: FC<NavBarProps> = ({ imageUrl }) => {
   const location = useLocation()
+  const params = useParams()
 
   return (
     <nav className={styles.navbar}>
@@ -30,6 +31,17 @@ export const NavBar: FC<NavBarProps> = ({ imageUrl }) => {
               <Link to={nav.path}>{nav.label}</Link>
             </li>
           ))}
+          {params.id && (
+            <li
+              className={classNames({
+                [styles.navbar__link]: true,
+                [styles['navbar__link--active']]:
+                  location.pathname === `/detail/${params.id}`,
+              })}
+            >
+              <Link to={`/detail/${params.id}`}>Detalhes</Link>
+            </li>
+          )}
         </ul>
       </div>
     </nav>

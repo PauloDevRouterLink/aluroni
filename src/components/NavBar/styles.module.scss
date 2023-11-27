@@ -26,7 +26,8 @@
       list-style: none;
 
       display: flex;
-      gap: 3.7rem;
+      align-items: center;
+      gap: 3.5rem;
 
       .navbar__link {
         font-size: 1.85rem;
@@ -36,24 +37,24 @@
         a {
           color: main.$trout_800;
           border: 0.2rem solid transparent;
+          padding-inline: 0.5rem;
 
           transition: all 0.2s ease;
 
           &:hover {
-            color: main.$trout_600;
-            background-color: main.$cinnabar_100;
+            color: main.$trout_200;
+            background: main.$cinnabar_600;
             border-radius: 0.3rem;
-
-            padding: 0.5rem;
           }
         }
 
         &--active {
-          border-bottom: 0.2rem solid main.$cinnabar_600;
-          padding-bottom: 0.25rem;
+          background: main.$cinnabar_600;
+          border-radius: 0.3rem;
+          padding: 0.5rem;
+
           a {
-            color: main.$cinnabar_600;
-            padding: 0.7rem;
+            color: main.$cinnabar_100;
           }
         }
       }

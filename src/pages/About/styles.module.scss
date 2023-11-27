@@ -2,6 +2,7 @@
 
 .about__title {
   @include main.title;
+  margin-bottom: 3rem;
 }
 
 .about_us {

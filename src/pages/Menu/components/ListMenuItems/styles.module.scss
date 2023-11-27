@@ -12,9 +12,21 @@
 // TODO: ==> Styles of Component ListItem
 .list_item {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 
-  width: 100%;
+  width: 72%;
+
+  padding: 1.3rem;
+
+  border-radius: 0.8rem;
+
+  transition: 0.2s ease-in;
+
+  &:hover {
+    cursor: pointer;
+    background-color: main.$caper_200;
+  }
 
   @media (max-width: main.$desktop_xs) {
     flex-direction: column;
@@ -23,6 +35,7 @@
 
   &__image {
     max-width: 24rem;
+
     @media (max-width: main.$desktop_xs) {
       width: 100%;
     }
@@ -30,12 +43,6 @@
     img {
       border-radius: 0.8rem;
       width: 100%;
-
-      transition: 0.3s ease-in-out;
-
-      &:hover {
-        transform: scale(103%);
-      }
     }
   }
 
@@ -44,7 +51,7 @@
     flex: 1;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 
     padding: 0 2rem;
 
@@ -66,83 +73,10 @@
 
     p {
       color: main.$trout_400;
-      font-size: 1.3rem;
-      font-weight: main.$fw_semibold;
+      font-size: 1.55rem;
+      font-weight: main.$fw_medium;
       max-width: 60rem;
       margin-bottom: 2rem;
     }
-  }
-
-  &__tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    max-width: 70rem;
-
-    @media (max-width: main.$desktop_xs) {
-      justify-content: flex-end;
-    }
-    @media (max-width: main.$mobile) {
-      justify-content: flex-start;
-    }
-
-    > div {
-      margin: 1rem;
-    }
-  }
-
-  &__type {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 0.9rem;
-
-    font-size: 1.4rem;
-    font-weight: main.$fw_bold;
-    font-family: main.$font_italiana;
-
-    height: 4rem;
-
-    padding: 1rem 3rem;
-
-    &__massas {
-      background-color: main.$massas;
-      color: main.$trout_50;
-    }
-
-    &__carnes {
-      background-color: main.$carnes;
-      color: main.$trout_50;
-    }
-
-    &__combos {
-      background-color: main.$combos;
-      color: main.$trout_50;
-    }
-
-    &__veganos {
-      background-color: main.$veganos;
-      color: main.$trout_50;
-    }
-  }
-
-  &__portion,
-  &__quantity_people,
-  &__value {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 1.65rem;
-    font-weight: main.$fw_bold;
-    font-family: main.$font_italiana;
-  }
-
-  &__value {
-    color: main.$thunderbird_600;
-    font-size: 1.7rem;
-    font-family: main.$font_italiana;
   }
 }

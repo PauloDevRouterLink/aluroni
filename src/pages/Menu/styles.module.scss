@@ -3,6 +3,7 @@
 .menu {
   &__title {
     @include main.title;
+    margin-bottom: 3rem;
   }
 
   &__filter {

@@ -1,0 +1,54 @@
+@use '../../../../scss/main';
+
+.unique__carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__image {
+    width: 30rem;
+    margin-bottom: 1rem;
+
+    img {
+      border-radius: 0.8rem;
+      width: 100%;
+
+      transition: 0.3s ease-in;
+
+      &:hover {
+        border-radius: 0.2rem;
+        transform: scale(103%) translateY(-5px);
+      }
+    }
+  }
+
+  &__button {
+    background-color: main.$thunderbird_500;
+    color: main.$trout_50;
+
+    border: none;
+    border-radius: 0.5rem;
+
+    font-size: 1.4rem;
+    font-weight: main.$fw_bold;
+    font-family: main.$font_poppins;
+    padding: 1rem 0;
+
+    transition: 0.2s ease;
+    width: 15rem;
+
+    &:hover {
+      background-color: main.$thunderbird_700;
+      transform: translateY(-2px);
+
+      width: 17rem;
+    }
+  }
+}

@@ -48,6 +48,13 @@
     background-repeat: no-repeat;
   }
 
+  &--detail {
+    background: url('/menu/detail.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
   &--about {
     background: url('/menu/banner.jpg');
     background-size: cover;

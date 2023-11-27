@@ -55,7 +55,7 @@ export const ListMenuItems: FC<ListMenuItemsProps> = props => {
   return (
     <div className={styles.list__menu_items}>
       {list.map(item => (
-        <ListItem key={item.id} item={item} />
+        <ListItem key={item.id} card={item} />
       ))}
     </div>
   )

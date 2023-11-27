@@ -8,7 +8,6 @@
   color: colors.$trout_800;
   font-size: 4rem;
   font-family: variables.$font_italiana;
-  margin-bottom: 3rem;
 }
 
 @mixin container {
@@ -51,4 +50,50 @@
     width: 11.5rem;
     gap: 1rem;
   }
+}
+
+@mixin tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 70rem;
+
+  @media (max-width: breakpoints.$desktop_xs) {
+    justify-content: flex-end;
+  }
+  @media (max-width: breakpoints.$mobile) {
+    justify-content: flex-start;
+  }
+}
+
+@mixin tags($fontSize) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: $fontSize;
+  font-weight: variables.$fw_bold;
+  font-family: variables.$font_italiana;
+}
+
+@mixin type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.7rem;
+
+  letter-spacing: 2.1px;
+  font-size: 1.35rem;
+  font-weight: variables.$fw_bold;
+  font-family: variables.$font_italiana;
+
+  height: 4rem;
+
+  padding: 1rem 3rem;
+}
+
+@mixin menuTagsType($background, $color) {
+  background-color: $background;
+  color: $color;
 }
