@@ -7,10 +7,10 @@ import { ListMenuItems } from './components/ListMenuItems'
 import MENU_OPTIONS from './[menu_options]'
 import styles from './styles.module.scss'
 
-export const Menu = () => {
+const Menu = () => {
+  const [order, setOrder] = useState<string>('')
   const [searching, setSearching] = useState<string>('')
   const [filter, setFilter] = useState<number | null>(null)
-  const [order, setOrder] = useState<string>('')
 
   return (
     <section className={styles.menu}>
@@ -19,15 +19,21 @@ export const Menu = () => {
 
       <div className={styles.menu__filter}>
         <Filter
-          listFilter={MENU_OPTIONS}
-          filtered={filter}
-          setFiltered={setFilter}
+          props={{
+            listFilter: MENU_OPTIONS,
+            filtered: filter,
+            setFiltered: setFilter,
+          }}
         />
 
         <Ordering ordering={order} setOrdering={setOrder} />
       </div>
 
-      <ListMenuItems search={searching} ordering={order} filtered={filter} />
+      <ListMenuItems
+        props={{ search: searching, ordering: order, filtered: filter }}
+      />
     </section>
   )
 }
+
+export default Menu

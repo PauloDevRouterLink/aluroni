@@ -1,5 +1,7 @@
 @use '../../../../scss/main';
 
+$transition: all 0.2s ease-in;
+
 .ordering {
   display: flex;
   align-items: center;

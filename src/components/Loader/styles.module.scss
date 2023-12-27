@@ -1,0 +1,48 @@
+@use '../../scss/main';
+
+@mixin boxSize($size) {
+  width: #{$size}rem;
+  height: #{$size}rem;
+}
+
+.loading {
+  height: 100vh;
+  width: 100%;
+
+  background-color: main.$caper_200;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  span {
+    font-size: 3.5rem;
+    font-weight: main.$fw_semibold;
+    font-family: main.$font_italiana;
+    color: main.$trout_800;
+  }
+
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__loader {
+      border: 0.3rem solid rgba(0, 0, 0, 0.1);
+      border-top: 0.3rem solid main.$trout_800;
+      border-radius: 50%;
+      @include boxSize(5.4);
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

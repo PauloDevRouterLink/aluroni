@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 
-export const About = () => {
+const About = () => {
   const images = ['/assets/massa1.png', '/assets/massa2.png']
 
   return (
@@ -39,3 +39,5 @@ export const About = () => {
     </section>
   )
 }
+
+export default About

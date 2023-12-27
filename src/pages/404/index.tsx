@@ -9,7 +9,7 @@ import LogoNotFound from '../../assets/not_found.svg'
 
 import styles from './styles.module.scss'
 
-export const NotFound = () => {
+const NotFound = () => {
   const navigate = useNavigate()
   const params = useParams()
 
@@ -26,10 +26,12 @@ export const NotFound = () => {
       </div>
 
       <section className={styles.not_found}>
-        <img src={LogoNotFound} alt="" />
+        <img src={LogoNotFound} alt="Logo da pagina não encontrada" />
       </section>
 
       {params.id ? null : <Footer logoUrl={Logotipo} />}
     </main>
   )
 }
+
+export default NotFound

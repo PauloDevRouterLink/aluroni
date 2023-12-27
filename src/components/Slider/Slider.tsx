@@ -27,21 +27,22 @@ type SliderProps = {
   children: ReactNode
 }
 
-export const SliderCarousel: FC<SliderProps> = ({ settings, children }) => (
-  <Swiper
-    modules={[
-      Navigation,
-      Pagination,
-      A11y,
-      Autoplay,
-      FreeMode,
-      EffectFade,
-      EffectCards,
-      EffectCreative,
-      Keyboard,
-    ]}
-    {...settings}
-  >
-    {children}
-  </Swiper>
-)
+export const SliderCarousel: FC<SliderProps> = ({ settings, children }) => {
+  const modules = [
+    Navigation,
+    Pagination,
+    A11y,
+    Autoplay,
+    FreeMode,
+    EffectFade,
+    EffectCards,
+    EffectCreative,
+    Keyboard,
+  ]
+
+  return (
+    <Swiper modules={modules} {...settings}>
+      {children}
+    </Swiper>
+  )
+}

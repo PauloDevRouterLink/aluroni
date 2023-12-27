@@ -1,15 +1,17 @@
 import { FC, useState, useEffect } from 'react'
-import { ListItem } from './ListItem'
+import ListItem from './ListItem'
 import MENU from '../../../../data/[items_menu]/[items_menu]'
 import styles from './styles.module.scss'
 
 type ListMenuItemsProps = {
-  search: string
-  filtered: number | null
-  ordering: string
+  props: {
+    search: string
+    filtered: number | null
+    ordering: string
+  }
 }
 
-export const ListMenuItems: FC<ListMenuItemsProps> = props => {
+export const ListMenuItems: FC<ListMenuItemsProps> = ({ props }) => {
   const [list, setList] = useState<typeof MENU>(MENU)
   const { ordering, filtered, search } = props
 

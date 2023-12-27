@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from 'react'
+import { Dispatch, FC, SetStateAction, memo, useMemo } from 'react'
 import { GoSearch } from 'react-icons/go'
 import styles from './styles.module.scss'
 
@@ -7,10 +7,14 @@ type SearchProps = {
   setSearch: Dispatch<SetStateAction<string>>
 }
 
-export const Search: FC<SearchProps> = ({ search, setSearch }) => {
+const iconProps = { size: 25, color: '#5a5c6f' }
+
+const Search: FC<SearchProps> = ({ search, setSearch }) => {
+  const SearchIcon = useMemo(() => <GoSearch {...iconProps} />, [])
+
   return (
     <div className={styles.search}>
-      <GoSearch size={25} color="#5a5c6f" />
+      {SearchIcon}
       <input
         type="text"
         placeholder="Buscar"
@@ -20,3 +24,5 @@ export const Search: FC<SearchProps> = ({ search, setSearch }) => {
     </div>
   )
 }
+
+export default memo(Search)

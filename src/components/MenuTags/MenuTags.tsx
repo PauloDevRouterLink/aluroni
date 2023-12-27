@@ -21,8 +21,7 @@ export const MenuTags: FC<MenuTagsProps> = ({ tags }) => {
   return (
     <div className={styles.menu_tags}>
       <div
-        className={classNames({
-          [styles.menu_tags__type]: true,
+        className={classNames(styles.menu_tags__type, {
           [styles[`menu_tags__type__${category.label.toLocaleLowerCase()}`]]:
             true,
         })}

@@ -1,4 +1,4 @@
-import { FC, Dispatch, SetStateAction } from 'react'
+import { FC, Dispatch, SetStateAction, memo } from 'react'
 import classNames from 'classnames'
 import Menu_options from '../../[menu_options]'
 
@@ -7,12 +7,16 @@ import styles from './styles.module.scss'
 type Option = (typeof Menu_options)[0]
 
 type FilterProps = {
-  listFilter: Array<Option>
-  filtered: number | null
-  setFiltered: Dispatch<SetStateAction<number | null>>
+  props: {
+    listFilter: Array<Option>
+    filtered: number | null
+    setFiltered: Dispatch<SetStateAction<number | null>>
+  }
 }
 
-const Filter: FC<FilterProps> = ({ listFilter, filtered, setFiltered }) => {
+const Filter: FC<FilterProps> = ({ props }) => {
+  const { listFilter, filtered, setFiltered } = props
+
   const selectFilter = (option: Option) => {
     if (filtered === option.id) return setFiltered(null)
     return setFiltered(option.id)
@@ -23,8 +27,7 @@ const Filter: FC<FilterProps> = ({ listFilter, filtered, setFiltered }) => {
       {listFilter?.map(option => (
         <button
           key={option.id}
-          className={classNames({
-            [styles.filtered__item]: true,
+          className={classNames(styles.filtered__item, {
             [styles['filtered__item--active']]: filtered === option.id,
           })}
           onClick={() => selectFilter(option)}
@@ -36,4 +39,4 @@ const Filter: FC<FilterProps> = ({ listFilter, filtered, setFiltered }) => {
   )
 }
 
-export { Filter }
+export default memo(Filter)

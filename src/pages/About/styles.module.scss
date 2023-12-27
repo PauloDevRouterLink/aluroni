@@ -7,6 +7,7 @@
 
 .about_us {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-bottom: 5rem;
 
@@ -25,6 +26,12 @@
       font-weight: main.$fw_normal;
     }
   }
+
+  @media (max-width: main.$desktop_sm) {
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .about_images {
@@ -38,6 +45,10 @@
 
     img {
       border-radius: 0.5rem;
+      width: 100%;
+    }
+
+    @media (max-width: main.$desktop_md) {
       width: 100%;
     }
   }

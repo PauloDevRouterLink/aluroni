@@ -1,11 +1,11 @@
-import { FC } from 'react'
-import { MenuItemProps as ListItemType } from '../../../../types/MenuItemProps'
-
-import styles from './styles.module.scss'
+import { FC, memo } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { MenuItemProps as ListItemType } from '../../../../types/MenuItemProps'
 import { MenuTags } from '../../../../components/MenuTags'
 
-export const ListItem: FC<ListItemType> = ({ card }) => {
+import styles from './styles.module.scss'
+
+const ListItem: FC<ListItemType> = ({ card }) => {
   const { title, description, price, category, serving, size, photo } = card
   const navigate = useNavigate()
 
@@ -27,3 +27,5 @@ export const ListItem: FC<ListItemType> = ({ card }) => {
     </article>
   )
 }
+
+export default memo(ListItem)

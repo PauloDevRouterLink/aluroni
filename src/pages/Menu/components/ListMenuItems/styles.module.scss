@@ -31,6 +31,7 @@
   @media (max-width: main.$desktop_xs) {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   &__image {
@@ -57,6 +58,8 @@
 
     @media (max-width: main.$desktop_xs) {
       flex-direction: row;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       margin-top: 2rem;
       padding: 0;

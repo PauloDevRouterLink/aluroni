@@ -1,43 +1,9 @@
-import { ReactElement } from 'react'
 import { RouteObject, createBrowserRouter } from 'react-router-dom'
-import { App } from '../App'
-import { Menu } from '../pages/Menu'
-import { Home } from '../pages/Home'
-import { About } from '../pages/About'
-import { NotFound } from '../pages/404'
-import { DetailPlates } from '../pages/[DetailsPlates]'
+import { route } from './routes'
 
-type RouterProps = {
-  path: string
-  element: ReactElement
-  children: Array<RouteObject>
-  errorElement: ReactElement
-}
+const routes: Array<RouteObject> = [route]
+export const router = createBrowserRouter(routes)
 
-const router: Array<RouterProps> = [
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <NotFound />,
-    children: [
-      {
-        path: '/',
-        element: <Home />,
-      },
-      {
-        path: 'menu',
-        element: <Menu />,
-      },
-      {
-        path: 'detail/:id',
-        element: <DetailPlates />,
-      },
-      {
-        path: 'about',
-        element: <About />,
-      },
-    ],
-  },
-]
-
-export const AppRoutes = createBrowserRouter(router)
+// export const Routes = () => {
+//   return useRoutes([appRoute, appRoute2])
+// }

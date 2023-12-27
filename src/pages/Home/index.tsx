@@ -3,7 +3,7 @@ import { Carousel } from './components/Carousel'
 
 import styles from './styles.module.scss'
 
-export const Home = () => {
+const Home = () => {
   let platesRecommended = [...MENU]
 
   platesRecommended = platesRecommended
@@ -30,3 +30,5 @@ export const Home = () => {
     </section>
   )
 }
+
+export default Home

@@ -1,5 +1,5 @@
-import { FC, Dispatch, SetStateAction, useState } from 'react'
-import { MdKeyboardArrowUp, MdOutlineKeyboardArrowDown } from 'react-icons/md'
+import { FC, Dispatch, SetStateAction, useState, memo } from 'react'
+import { MdKeyboardArrowUp } from 'react-icons/md'
 import classNames from 'classnames'
 import OPTIONS_SELECT from './[options_select]'
 
@@ -10,29 +10,29 @@ type OrderProps = {
   setOrdering: Dispatch<SetStateAction<string>>
 }
 
-export const Ordering: FC<OrderProps> = ({ ordering, setOrdering }) => {
+const Ordering: FC<OrderProps> = ({ ordering, setOrdering }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const nameOrdering =
     ordering && OPTIONS_SELECT.find(option => option.value === ordering)?.name
 
   return (
     <button
-      className={classNames({
-        [styles.ordering]: true,
+      className={classNames(styles.ordering, {
         [styles['ordering--active']]: ordering !== '',
       })}
       onClick={() => setIsOpen(!isOpen)}
       onBlur={() => setIsOpen(false)}
     >
       <span>{nameOrdering || 'Ordenar por'}</span>
-      {isOpen ? (
-        <MdKeyboardArrowUp size={20} />
-      ) : (
-        <MdOutlineKeyboardArrowDown size={20} />
-      )}
+      <MdKeyboardArrowUp
+        size={20}
+        style={{
+          transition: '.3s ease-out',
+          transform: `rotate(${isOpen ? 0 : 180}deg)`,
+        }}
+      />
       <div
-        className={classNames({
-          [styles.ordering__options]: true,
+        className={classNames(styles.ordering__options, {
           [styles['ordering__options--active']]: isOpen,
         })}
       >
@@ -49,3 +49,5 @@ export const Ordering: FC<OrderProps> = ({ ordering, setOrdering }) => {
     </button>
   )
 }
+
+export default memo(Ordering)

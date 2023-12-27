@@ -35,7 +35,7 @@ export const Carousel: FC<CarouselProps> = ({ carousel: CARDS }) => {
         slidesPerGroup: CARDS.length < 2 ? CARDS.length : 2,
         navigation: false,
       },
-      1200: {
+      1080: {
         slidesPerView: CARDS.length < 3 ? CARDS.length : 3,
         slidesPerGroup: CARDS.length < 3 ? CARDS.length : 3,
       },

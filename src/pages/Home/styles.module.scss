@@ -1,7 +1,6 @@
 @use '../../scss/main';
 
 // TODO: Styles from page Home
-
 .home__title {
   @include main.title;
   margin-bottom: 3rem;
