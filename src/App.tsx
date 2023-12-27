@@ -3,10 +3,10 @@ import { Outlet, useLocation, useParams } from 'react-router-dom'
 import classNames from 'classnames'
 import { NavBar } from './components/NavBar'
 import { Footer } from './components/Footer'
+import { Loader } from './components/Loader'
 
 import Logotipo from './assets/logo.svg'
 import styles from './scss/app/styles.module.scss'
-import { Loader } from './components/Loader'
 
 const App = () => {
   const { pathname } = useLocation()
@@ -30,9 +30,8 @@ const App = () => {
 
   return (
     <main>
+      <NavBar imageUrl={Logotipo} />
       <Suspense fallback={<Loader label="Carregando" />}>
-        <NavBar imageUrl={Logotipo} />
-
         <header
           className={classNames(styles.header, {
             [styles[`header${isActive}`]]: true,
@@ -46,9 +45,8 @@ const App = () => {
         <div className={styles.app__container}>
           <Outlet />
         </div>
-
-        <Footer logoUrl={Logotipo} />
       </Suspense>
+      <Footer logoUrl={Logotipo} />
     </main>
   )
 }
